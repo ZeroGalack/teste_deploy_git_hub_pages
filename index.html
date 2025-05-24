@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Função Seno</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    canvas {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gráfico da Função Seno</h1>
+  <canvas id="canvas" width="600" height="300"></canvas>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(0, 150); // meio da altura
+
+    for (let x = 0; x <= 600; x++) {
+      const y = 150 - 100 * Math.sin((x / 600) * 4 * Math.PI);
+      ctx.lineTo(x, y);
+    }
+
+    ctx.strokeStyle = "blue";
+    ctx.stroke();
+  </script>
+</body>
+</html>
