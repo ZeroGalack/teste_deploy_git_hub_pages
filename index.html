@@ -18,13 +18,15 @@
 <body>
     <h1>Gerar Gráfico de Função Seno</h1>
 
-    <label for="frequency">Frequência:</label>
-    <input type="number" id="frequency" value="1" step="0.1"><br><br>
+    <div style="display: flex; align-items: center; flex-direction: columns;">
+      <label for="frequency">Frequência:</label>
+      <input type="number" id="frequency" value="1" step="0.1"><br><br>
 
-    <label for="amplitude">Amplitude:</label>
-    <input type="number" id="amplitude" value="1" step="0.1"><br><br>
+      <label for="amplitude">Amplitude:</label>
+      <input type="number" id="amplitude" value="1" step="0.1"><br><br>
 
-    <button onclick="drawSine()">Gerar Gráfico</button>
+      <button onclick="drawSine()">Gerar Gráfico</button>
+    </div>
 
     <canvas id="sineCanvas" width="600" height="300"></canvas>
 
